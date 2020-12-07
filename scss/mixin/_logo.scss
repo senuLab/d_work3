@@ -1,0 +1,9 @@
+@mixin logo {
+  width: 205px;
+  height: 40;
+  margin-top: 60px;
+
+  @include mq("lg") {
+    margin: 0;
+  }
+}

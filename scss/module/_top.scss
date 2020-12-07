@@ -1,0 +1,37 @@
+.top {
+  height: 450px;
+  background-image: url("../../img/mainvisual.png");
+  background-size: cover;
+  text-align: center;
+
+  @include mq("lg") {
+    height: 600px;
+  }
+
+  h1 {
+    padding: 150px 0 22px 0;
+    margin: 0;
+    font-size: 26px;
+
+    @include mq("lg") {
+      padding: 184px 0 32px 0;
+      font-size: 64px;
+    }
+  }
+  p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: bold;
+
+    @include mq("lg") {
+      margin: 0 0 40px 0;
+      font-size: 24px;
+    }
+  }
+  .btn {
+    @include btn(100%, 72px, 20px);
+    @include mq("lg") {
+      @include btn(384px, 72px, 24px);
+    }
+  }
+}

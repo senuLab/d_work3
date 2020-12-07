@@ -1,0 +1,29 @@
+$pc-canvas-width: 1280px;
+$pc-container-width: 1200px;
+$mobile-canvas-width: 100%;
+$mobile-container-width: 95%;
+
+$background-color-blue: #2f51b5;
+$color-white: #ffffff;
+
+body {
+  width: $mobile-canvas-width;
+  margin: 0 auto;
+
+  @include mq("lg") {
+    width: $pc-canvas-width;
+  }
+}
+
+.container {
+  width: $mobile-container-width;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+
+  @include mq("lg") {
+    width: $pc-container-width;
+    margin: 0 auto;
+  }
+}
