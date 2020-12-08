@@ -1,23 +1,32 @@
 body {
+  font-family: "Yu-gothic";
   width: 100%;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) {
   body {
     width: 1280px;
+    max-width: 1280px;
   }
 }
 
 .container {
-  width: 95%;
+  width: 90%;
   height: 100%;
   margin: 0;
   padding: 0;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .container {
     width: 1200px;
     margin: 0 auto;
@@ -25,12 +34,22 @@ body {
 }
 
 header {
-  height: 170px;
+  height: 60px;
   background-color: #2f51b5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  /* .is-active {
+    border-bottom: 2px solid #e81919;
+  } */
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   header {
+    top: 0;
+    left: 40;
     height: 100px;
   }
 }
@@ -39,16 +58,12 @@ header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   header .container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -57,14 +72,14 @@ header .container {
   }
 }
 
-header .container .header-logo {
+header .container .header-logo img {
   width: 205px;
   height: 40;
-  margin-top: 60px;
+  /* margin-top: 30px; */
 }
 
-@media screen and (min-width: 768px) {
-  header .container .header-logo {
+@media screen and (min-width: 769px) {
+  header .container .header-logo img {
     margin: 0;
   }
 }
@@ -73,7 +88,7 @@ header .container .header-nav {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   header .container .header-nav {
     width: auto;
     margin-left: auto;
@@ -81,12 +96,18 @@ header .container .header-nav {
 }
 
 header .nav-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   padding: 0;
   color: #ffffff;
-  margin-top: 25px;
+  /* margin-top: 25px; */
+}
+
+@media screen and (min-width: 769px) {
+  header .nav-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 header .nav-items .nav-item {
@@ -96,9 +117,16 @@ header .nav-items .nav-item {
   list-style: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   header .nav-items .nav-item {
+    /* pattern1*/
     margin-left: 40px;
+    /* pattern2
+      padding: 0;
+      text-align: center;
+      width: 100px;
+      height: 100px;
+      */
     font-size: 16px;
   }
 }
@@ -106,22 +134,53 @@ header .nav-items .nav-item {
 header .nav-items .nav-item a {
   text-decoration: none;
   color: #ffffff;
+  position: relative;
+  /* pattern2
+      display: block;
+      padding: 38px 0; 
+      */
 }
 
-header .is-active {
-  border-bottom: 2px solid #e81919;
+header .nav-items .nav-item a::after {
+  content: "";
+  position: absolute;
+  /* patter1*/
+  left: 0;
+  bottom: -10px;
+  /* pattern2
+        left: 0;
+        top: 0;
+        */
+  width: 100%;
+  height: 2px;
+  background-color: #e81919;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+header .nav-items .nav-item a.is-active::after {
+  opacity: 1;
 }
 
 .top {
+  width: 100%;
   height: 450px;
-  background-image: url("../../img/mainvisual.png");
+  /* position: absolute; */
+  margin-top: 60px;
+  background-image: url("./../img/mainvisual.png");
+  background-size: auto;
   background-size: cover;
   text-align: center;
+  /* height: 100vh; */
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .top {
+    width: 1280px;
     height: 600px;
+    /* height: 100vh; */
+    margin-top: 100px;
   }
 }
 
@@ -131,7 +190,14 @@ header .is-active {
   font-size: 26px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
+  .top h1 {
+    padding: 184px 0 32px 0;
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 769px) {
   .top h1 {
     padding: 184px 0 32px 0;
     font-size: 64px;
@@ -144,7 +210,7 @@ header .is-active {
   font-weight: bold;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .top p {
     margin: 0 0 40px 0;
     font-size: 24px;
@@ -164,7 +230,7 @@ header .is-active {
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .top .btn {
     width: 384px;
     height: 72px;
@@ -176,5 +242,161 @@ header .is-active {
     font-weight: bold;
     color: #ffffff;
     cursor: pointer;
+  }
+}
+
+.card {
+  height: 1042px;
+  background-color: #efefef;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card h2 {
+  margin: 0 0 52px 0;
+  padding-top: 50px;
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+}
+
+@media screen and (min-width: 769px) {
+  .card h2 {
+    margin: 0 0 92px 0;
+    padding-top: 100px;
+    font-size: 48px;
+  }
+}
+
+.card h2::after {
+  content: "";
+  position: absolute;
+  left: 150px;
+  bottom: -14px;
+  width: 40px;
+  height: 4px;
+  background-color: #2f51b5;
+}
+
+@media screen and (min-width: 480px) {
+  .card h2::after {
+    left: 325px;
+    bottom: -18px;
+    width: 45px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .card h2::after {
+    left: 570px;
+    bottom: -24px;
+    width: 70px;
+  }
+}
+
+.card .card-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 480px) {
+  .card .card-wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .card .card-wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.card .card-item {
+  margin-top: 8px;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .card .card-item {
+    margin: 12px auto 0;
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .card .card-item {
+    margin-top: 16px;
+    width: 384px;
+  }
+}
+
+.card .card-item img {
+  padding: 8px;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 480px) {
+  .card .card-item img {
+    padding: 12px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .card .card-item img {
+    padding: 16px;
+  }
+}
+
+.card .card-item h3 {
+  padding: 0 8px;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+@media screen and (min-width: 480px) {
+  .card .card-item h3 {
+    padding: 0 12px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .card .card-item h3 {
+    padding: 0 16px;
+  }
+}
+
+.card .card-item p {
+  padding: 8px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 480px) {
+  .card .card-item p {
+    padding: 12px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .card .card-item p {
+    padding: 16px;
   }
 }

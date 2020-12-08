@@ -1,29 +1,28 @@
-$pc-canvas-width: 1280px;
-$pc-container-width: 1200px;
-$mobile-canvas-width: 100%;
-$mobile-container-width: 95%;
-
-$background-color-blue: #2f51b5;
-$color-white: #ffffff;
-
 body {
-  width: $mobile-canvas-width;
+  font-family: "Yu-gothic";
+  width: $sm-canvas-width;
   margin: 0 auto;
 
+  @include mq("md") {
+    width: $md-canvas-width;
+    max-width: $md-canvas-width;
+  }
+
   @include mq("lg") {
-    width: $pc-canvas-width;
+    width: $lg-canvas-width;
+    max-width: $lg-canvas-width;
   }
 }
 
 .container {
-  width: $mobile-container-width;
+  width: $sm-container-width;
   height: 100%;
   margin: 0;
   padding: 0;
   margin: 0 auto;
 
   @include mq("lg") {
-    width: $pc-container-width;
+    width: $lg-container-width;
     margin: 0 auto;
   }
 }

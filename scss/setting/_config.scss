@@ -1,5 +1,19 @@
+$sm-canvas-width: 100%;
+$sm-container-width: 90%;
+$sm-header-height: 60px;
+
+$md-canvas-width: 100%;
+$md-container-width: 90%;
+
+$lg-canvas-width: 1280px;
+$lg-container-width: 1200px;
+$lg-header-height: 100px;
+
+$background-color-blue: #2f51b5;
+$color-white: #ffffff;
+
 $breakpoints: (
   "sm": "screen and (max-width:479px)",
   "md": "screen and (min-width:480px)",
-  "lg": "screen and (min-width:768px)",
+  "lg": "screen and (min-width:769px)",
 );

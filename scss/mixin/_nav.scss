@@ -1,10 +1,11 @@
 @mixin nav-style {
-  display: flex;
+  display: none;
   padding: 0;
   color: $color-white;
-  margin-top: 25px;
+  /* margin-top: 25px; */
 
   @include mq("lg") {
+    display: flex;
   }
 
   .nav-item {
@@ -14,13 +15,54 @@
     list-style: none;
 
     @include mq("lg") {
+      /* pattern1*/
       margin-left: 40px;
+
+      /* pattern2
+      padding: 0;
+      text-align: center;
+      width: 100px;
+      height: 100px;
+      */
+
       font-size: 16px;
     }
 
     a {
       text-decoration: none;
       color: $color-white;
+      position: relative;
+
+      /* pattern2
+      display: block;
+      padding: 38px 0; 
+      */
+
+      &::after {
+        content: "";
+        position: absolute;
+
+        /* patter1*/
+        left: 0;
+        bottom: -10px;
+
+        /* pattern2
+        left: 0;
+        top: 0;
+        */
+
+        width: 100%;
+        height: 2px;
+        background-color: #e81919;
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+      }
+
+      &.is-active {
+        &::after {
+          opacity: 1;
+        }
+      }
     }
   }
 }

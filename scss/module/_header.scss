@@ -1,21 +1,27 @@
 header {
-  height: 170px;
+  height: $sm-header-height;
   background-color: $background-color-blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
 
   @include mq("lg") {
-    height: 100px;
+    top: 0;
+    left: 40;
+    height: $lg-header-height;
   }
 
   .container {
     display: flex;
-    flex-direction: column;
     align-items: center;
 
     @include mq("lg") {
       flex-direction: row;
     }
 
-    .header-logo {
+    .header-logo img {
       @include logo;
     }
 
@@ -32,7 +38,7 @@ header {
     @include nav-style;
   }
 
-  .is-active {
+  /* .is-active {
     border-bottom: 2px solid #e81919;
-  }
+  } */
 }

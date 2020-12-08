@@ -1,7 +1,8 @@
 @mixin logo {
   width: 205px;
   height: 40;
-  margin-top: 60px;
+
+  /* margin-top: 30px; */
 
   @include mq("lg") {
     margin: 0;

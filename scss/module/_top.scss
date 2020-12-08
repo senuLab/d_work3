@@ -1,17 +1,30 @@
 .top {
+  width: $sm-canvas-width;
   height: 450px;
-  background-image: url("../../img/mainvisual.png");
+  /* position: absolute; */
+  margin-top: $sm-header-height;
+  background-image: url("./../img/mainvisual.png");
+  background-size: auto;
   background-size: cover;
   text-align: center;
+  /* height: 100vh; */
 
   @include mq("lg") {
+    width: $lg-canvas-width;
     height: 600px;
+    /* height: 100vh; */
+    margin-top: $lg-header-height;
   }
 
   h1 {
     padding: 150px 0 22px 0;
     margin: 0;
     font-size: 26px;
+
+    @include mq("lg") {
+      padding: 184px 0 32px 0;
+      font-size: 50px;
+    }
 
     @include mq("lg") {
       padding: 184px 0 32px 0;

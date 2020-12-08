@@ -1,0 +1,114 @@
+.card {
+  height: 1042px;
+  background-color: #efefef;
+  width: 100%;
+  margin: 0 auto;
+
+  h2 {
+    margin: 0 0 52px 0;
+    padding-top: 50px;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+
+    @include mq("lg") {
+      margin: 0 0 92px 0;
+      padding-top: 100px;
+      font-size: 48px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 150px;
+      bottom: -14px;
+      width: 40px;
+      height: 4px;
+      background-color: $background-color-blue;
+
+      @include mq("md") {
+        left: 325px;
+        bottom: -18px;
+        width: 45px;
+      }
+
+      @include mq("lg") {
+        left: 570px;
+        bottom: -24px;
+        width: 70px;
+      }
+    }
+  }
+
+  .card-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include mq("md") {
+      flex-direction: row;
+    }
+
+    @include mq("lg") {
+      flex-direction: row;
+    }
+  }
+
+  .card-item {
+    margin-top: 8px;
+    background-color: #ffffff;
+    width: 100%;
+
+    @include mq("md") {
+      margin: 12px auto 0;
+      width: calc((100% - 24px) / 2);
+    }
+
+    @include mq("lg") {
+      margin-top: 16px;
+      width: 384px;
+    }
+
+    img {
+      padding: 8px;
+      max-width: 100%;
+      box-sizing: border-box;
+
+      @include mq("md") {
+        padding: 12px;
+      }
+
+      @include mq("lg") {
+        padding: 16px;
+      }
+    }
+
+    h3 {
+      padding: 0 8px;
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.1;
+      @include mq("md") {
+        padding: 0 12px;
+      }
+
+      @include mq("lg") {
+        padding: 0 16px;
+      }
+    }
+
+    p {
+      padding: 8px;
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.5;
+      @include mq("md") {
+        padding: 12px;
+      }
+
+      @include mq("lg") {
+        padding: 16px;
+      }
+    }
+  }
+}
