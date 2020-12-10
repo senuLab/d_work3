@@ -2,8 +2,10 @@
   h2 {
     text-align: center;
     position: relative;
+    margin-bottom: 52px;
 
     @include mq("md") {
+      margin-bottom: 72px;
     }
 
     @include mq("lg") {
@@ -37,15 +39,25 @@
 
   &-list {
     margin: 0 auto 38px;
-    width: 800px;
+    width: 100%;
+
+    @include mq("lg") {
+      width: 800px;
+    }
   }
 
   &-item {
-    margin-top: 5px;
     display: flex;
+    flex-direction: column;
     font-size: 14px;
     padding-bottom: 9px;
     border-bottom: 1px solid #707070;
+
+    @include mq("lg") {
+      margin-top: 5px;
+      flex-direction: row;
+      font-size: 14px;
+    }
 
     &:not(:last-child) {
       border-bottom: 1px solid #707070;
@@ -96,12 +108,13 @@
   }
 
   &-content {
-    width: calc(100% - 185px);
-  }
-
-  &-content {
+    width: 100%;
     font-size: 15px;
-    letter-spacing: 1.7px;
+    letter-spacing: 1.5px;
+
+    @include mq("lg") {
+      width: calc(100% - 185px);
+    }
   }
 }
 

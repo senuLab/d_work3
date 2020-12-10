@@ -430,6 +430,13 @@ header .nav-items .nav-item a.is-active::after {
 .news h2 {
   text-align: center;
   position: relative;
+  margin-bottom: 52px;
+}
+
+@media screen and (min-width: 480px) {
+  .news h2 {
+    margin-bottom: 72px;
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -469,17 +476,37 @@ header .nav-items .nav-item a.is-active::after {
 
 .news-list {
   margin: 0 auto 38px;
-  width: 800px;
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .news-list {
+    width: 800px;
+  }
 }
 
 .news-item {
-  margin-top: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 14px;
   padding-bottom: 9px;
   border-bottom: 1px solid #707070;
+}
+
+@media screen and (min-width: 769px) {
+  .news-item {
+    margin-top: 5px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 14px;
+  }
 }
 
 .news-item:not(:last-child) {
@@ -532,12 +559,15 @@ header .nav-items .nav-item a.is-active::after {
 }
 
 .news-content {
-  width: calc(100% - 185px);
+  width: 100%;
+  font-size: 15px;
+  letter-spacing: 1.5px;
 }
 
-.news-content {
-  font-size: 15px;
-  letter-spacing: 1.7px;
+@media screen and (min-width: 769px) {
+  .news-content {
+    width: calc(100% - 185px);
+  }
 }
 
 .news-more {
