@@ -31,20 +31,19 @@
     &::after {
       content: "";
       position: absolute;
-      left: 150px;
+      left: 50%;
       bottom: -14px;
       width: 40px;
       height: 4px;
+      transform: translate(-50%);
       background-color: $background-color-blue;
 
       @include mq("md") {
-        left: 325px;
         bottom: -18px;
         width: 45px;
       }
 
       @include mq("lg") {
-        left: 570px;
         bottom: -23px;
         width: 60px;
       }

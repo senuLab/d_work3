@@ -1,0 +1,123 @@
+.news {
+  h2 {
+    text-align: center;
+    position: relative;
+
+    @include mq("md") {
+    }
+
+    @include mq("lg") {
+      padding-top: 60px;
+      margin-bottom: 92px;
+      font-size: 42px;
+      letter-spacing: 2px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -14px;
+      width: 40px;
+      height: 4px;
+      transform: translate(-50%);
+      background-color: $background-color-blue;
+
+      @include mq("md") {
+        bottom: -18px;
+        width: 45px;
+      }
+
+      @include mq("lg") {
+        bottom: -19px;
+        width: 60px;
+      }
+    }
+  }
+
+  &-list {
+    margin: 0 auto 38px;
+    width: 800px;
+  }
+
+  &-item {
+    margin-top: 5px;
+    display: flex;
+    font-size: 14px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #707070;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #707070;
+      margin-bottom: 14px;
+    }
+
+    a {
+      margin: 6px 0;
+      padding-top: 5px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .label {
+      display: inline-block;
+      margin: auto 0;
+      padding: 5px 0;
+      text-align: center;
+      color: white;
+      background-color: red;
+      background-color: #666666;
+      border-radius: 4px;
+      width: 80px;
+      height: 21px;
+      letter-spacing: 3px;
+
+      &2 {
+        background-color: #3f51b5;
+      }
+
+      &3 {
+        background-color: #e81919;
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    width: 185px;
+    margin-right: 20px;
+
+    time {
+      display: inline-block;
+      margin: auto 0;
+      width: 105px;
+      height: 16px;
+    }
+  }
+
+  &-content {
+    width: calc(100% - 185px);
+  }
+
+  &-content {
+    font-size: 15px;
+    letter-spacing: 1.7px;
+  }
+}
+
+.news-more {
+  text-align: center;
+  margin-bottom: 100px;
+
+  .more-link {
+    display: inline-block;
+    margin: 0 auto;
+    color: #e81919;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 16px;
+    background: transparent url(./../../img/news-arrow.svg) no-repeat center
+      right;
+  }
+}
