@@ -1,0 +1,147 @@
+.price {
+  background-color: $background-color-gray;
+  height: 100%;
+  padding-bottom: 100px;
+
+  @include mq("md") {
+    padding-bottom: 120px;
+  }
+
+  @include mq("lg") {
+    height: 565px;
+  }
+
+  &-title {
+    padding-top: 20px;
+
+    h2 {
+      position: relative;
+      text-align: center;
+
+      @include mq("lg") {
+        margin: 0 0 98px 0;
+        padding-top: 72px;
+        font-size: 42px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -14px;
+        width: 40px;
+        height: 4px;
+        transform: translate(-50%);
+        background-color: $background-color-blue;
+
+        @include mq("md") {
+          bottom: -18px;
+          width: 45px;
+        }
+
+        @include mq("lg") {
+          bottom: -19px;
+          width: 60px;
+        }
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+
+    @include mq("lg") {
+      flex-direction: row;
+    }
+  }
+
+  &-img {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+
+    @include mq("lg") {
+      margin: 0 40px 0 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-table {
+    margin-top: 10px;
+
+    @include mq("lg") {
+      margin: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      @include mq("lg") {
+        width: 706px;
+        height: 286px;
+        font-size: 15px;
+      }
+    }
+
+    tr {
+      height: 20%;
+    }
+
+    td {
+      border: 1px solid #707070;
+
+      &:first-child {
+        text-align: center;
+        color: $color-white;
+        background-color: #a7a1a1;
+      }
+
+      &:not(:first-child) {
+        text-align: right;
+        padding-right: 22px;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .special {
+        color: #e81919;
+
+        &-message {
+          font-size: 12px;
+          letter-spacing: 2px;
+        }
+      }
+    }
+
+    th {
+      color: $color-white;
+      background-color: #a7a1a1;
+      border: 1px solid #707070;
+      font-weight: normal;
+
+      &:not(:first-child) {
+        width: 38%;
+      }
+    }
+  }
+
+  &-contact {
+    @include mq("lg") {
+      margin: 8px 0 0 0;
+      font-size: 15px;
+      letter-spacing: -1px;
+    }
+
+    a {
+      color: #333333;
+    }
+  }
+}
