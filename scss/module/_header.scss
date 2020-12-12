@@ -36,6 +36,15 @@ header {
 
   .nav-items {
     @include nav-style;
+    text-align: right;
+
+    .nav-item {
+      margin-top: 6px;
+    }
+
+    .nav-item:first-child {
+      margin-left: auto;
+    }
   }
 
   /* .is-active {

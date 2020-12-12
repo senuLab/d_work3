@@ -1,0 +1,121 @@
+footer {
+  background: linear-gradient(#666666, #333333);
+  width: 100%;
+  padding-bottom: 20px;
+  font-size: 12px;
+
+  @include mq("md") {
+    font-size: 16px;
+  }
+
+  @include mq("lg") {
+    padding: 0;
+    height: 258px;
+    font-size: 16px;
+  }
+}
+
+.footer {
+  &-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+
+    @include mq("lg") {
+      flex-direction: row;
+    }
+  }
+
+  &-info {
+    width: 100%;
+    text-align: center;
+
+    @include mq("lg") {
+      width: 20%;
+      text-align: start;
+    }
+
+    &_detail {
+      margin-top: 30px;
+      color: $color-white;
+
+      p {
+        margin: 0 0 10px 0;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  &-logo {
+    @include logo;
+    margin: 0 auto;
+  }
+
+  &-nav {
+    width: 100%;
+
+    @include mq("lg") {
+      width: 60%;
+    }
+  }
+
+  &-link {
+    width: 100%;
+    display: flex;
+
+    @include mq("lg") {
+      flex-direction: row-reverse;
+      width: 20%;
+    }
+
+    img {
+      height: 30px;
+      margin-left: 10px;
+    }
+
+    &_wrap {
+      margin: 0 auto;
+
+      @include mq("lg") {
+        margin: 0;
+      }
+    }
+
+    /* a {
+      display: inline-block;
+    }
+    &_twitter {
+      margin-left: auto;
+    } */
+  }
+
+  &-copyright {
+    margin: 34px 0 0 0;
+    color: $color-white;
+    text-align: center;
+    font-size: 13px;
+  }
+}
+
+.nav-items {
+  @include nav-style;
+
+  @include mq("lg") {
+    margin: 0;
+  }
+
+  li {
+    margin-top: 0;
+
+    &:first-child {
+      margin-left: 168px;
+    }
+  }
+}
+
+.scroll {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}

@@ -9,14 +9,19 @@
   }
 
   .nav-item {
-    margin: 0 auto;
+    //margin: 0 auto;
+    //margin-left: 30px;
     padding-bottom: 8px;
     font-size: 14px;
     list-style: none;
 
+    &:not(:first-child) {
+      margin-left: 40px;
+    }
+
     @include mq("lg") {
       /* pattern1*/
-      margin-left: 40px;
+      //margin-left: 40px;
 
       /* pattern2
       padding: 0;
@@ -26,7 +31,7 @@
       */
 
       font-size: 15px;
-      margin-top: 6px;
+      //margin-top: 6px;
     }
 
     a {

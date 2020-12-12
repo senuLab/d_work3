@@ -213,12 +213,12 @@
             </dl>
           </div>
           <div class="access-btn_wrapper">
-            <input type="button"
+            <input
+              type="button"
               onclick="location.href='https://www.google.co.jp/maps/place/%E6%97%A5%E6%9C%AC%E6%AD%A6%E9%81%93%E9%A4%A8/@35.6933175,139.7476963,17z/data=!3m1!4b1!4m5!3m4!1s0x60188c6b802bf413:0x215b5c71c9657188!8m2!3d35.6933175!4d139.749885?hl=ja'"
               class="access-btn"
               value="Googleマップで見る"
-            >
-            </input>
+            />
           </div>
         </div>
       </div>
@@ -233,10 +233,7 @@
           <div class="contact-content">
             <form action="post">
               <div class="contact-item">
-                <!-- <div class="necessary"> -->
                 <label for="name" class="necessary">お名前</label>
-                <!-- <p>必須</p> -->
-                <!-- </div> -->
                 <input
                   type="name"
                   class="area"
@@ -246,10 +243,7 @@
                 />
               </div>
               <div class="contact-item">
-                <!-- <div class="necessary"> -->
-                <label for="email" class="necessary" >メールアドレス</label>
-                <!-- <p>必須</p> -->
-                <!-- </div> -->
+                <label for="email" class="necessary">メールアドレス</label>
                 <input
                   type="email"
                   class="area"
@@ -259,9 +253,8 @@
                 />
               </div>
               <div class="contact-item">
-                <label for="">お問い合わせ種別</label>
-                <!-- <input type="text" class="area" placeholder="−−−" /> -->
-                <select name="" id="">
+                <label for="select">お問い合わせ種別</label>
+                <select id="select">
                   <option hidden value="">ーーー</option>
                   <option value="">kkk</option>
                   <option value="">lll</option>
@@ -278,13 +271,17 @@
                 />
               </div>
               <div class="contact-item_radio">
-                <label><input type="radio" checked/><span>ラジオ1</span></label>
+                <label
+                  ><input type="radio" checked /><span>ラジオ1</span></label
+                >
                 <label><input type="radio" /><span>ラジオ2</span></label>
                 <label><input type="radio" /><span>ラジオ3</span></label>
               </div>
               <div class="contact-item_check">
-                <input type="checkbox" checked required/>
-                <span><a href="#">プライバシーポリシー</a>に合意する</span>
+                <label>
+                  <input type="checkbox" required />
+                  <span><a href="#">プライバシーポリシー</a>に合意する</span>
+                </label>
               </div>
               <button>送信する</button>
             </form>
@@ -293,6 +290,46 @@
       </div>
     </section>
 
-    <footer></footer>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <div class="footer-logo">
+              <img src="./img/logo.png" alt="logoの画像" />
+            </div>
+            <div class="footer-info_detail">
+              <p>住所：ほげほげのほげほげ</p>
+              <p>TEL：0000-00-0000</p>
+            </div>
+          </div>
+          <nav class="footer-nav">
+            <ul class="nav-items">
+              <li class="nav-item"><a href="#">Card</a></li>
+              <li class="nav-item"><a href="#">News</a></li>
+              <li class="nav-item"><a href="#">Price</a></li>
+              <li class="nav-item"><a href="#">Access</a></li>
+              <li class="nav-item"><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="footer-link">
+            <!-- <a href="#" class="footer-link_twitter">k</a>
+            <a href="#" class="footer-link_facebook">k</a>
+            <a href="#" class="footer-link_instagram">k</a> -->
+            <div class="footer-link_wrap">
+              <img src="./img/twitter.svg" alt="" />
+              <img src="./img/facebook.svg" alt="" />
+              <img src="./img/instagram.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <p class="footer-copyright">
+          Copyright © 2020 デイトラ All rights reserved.
+        </p>
+      </div>
+
+      <div class="scroll">
+        <a href="#"><img src="./img/totop.svg" alt="" /></a>
+      </div>
+    </footer>
   </body>
 </html>
