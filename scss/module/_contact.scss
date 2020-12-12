@@ -1,0 +1,287 @@
+.contact {
+  height: 100%;
+  background-color: $background-color-gray;
+
+  @include mq("lg") {
+    height: 1253px;
+  }
+
+  h2 {
+    @include underbar();
+
+    @include mq("lg") {
+      margin: 0 0 100px 0;
+      padding-top: 94px;
+    }
+  }
+
+  &-wrap {
+    margin: 0 auto;
+    background-color: $color-white;
+
+    @include mq("lg") {
+      width: 800px;
+      height: 877px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 30px;
+    box-sizing: border-box;
+
+    @include mq("lg") {
+      padding: 60px 60px;
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+
+    @include mq("lg") {
+      flex-direction: row;
+    }
+
+    input {
+      letter-spacing: 1.6px;
+    }
+
+    .necessary {
+      position: relative;
+      margin-right: auto;
+
+      &::after {
+        content: "必須";
+        position: absolute;
+        top: 0;
+        left: 120px;
+        width: 44px;
+        height: 22px;
+        text-align: center;
+        font-size: 14px;
+        margin: auto 0;
+        background-color: #e81919;
+        color: $color-white;
+        border-radius: 4px;
+
+        @include mq("lg") {
+          top: 30px;
+          left: 0;
+        }
+      }
+
+      P {
+        margin: 0;
+        width: 44px;
+        height: 22px;
+        text-align: center;
+        background-color: #e81919;
+        color: $color-white;
+        border-radius: 4px;
+      }
+    }
+
+    label {
+      display: block;
+      margin-right: auto;
+      margin-top: 8px;
+
+      &:not([for="text"]) {
+        margin: auto auto auto 0;
+      }
+    }
+
+    select {
+      display: block;
+      width: 100%;
+      height: 38px;
+      appearance: none;
+      background: transparent url(./../../img/select-arrow.svg) no-repeat center
+        right 10px;
+
+      @include mq("lg") {
+        width: 520px;
+      }
+    }
+
+    .area {
+      display: inline-block;
+      width: 100%;
+      height: 32px;
+
+      @include mq("lg") {
+        width: 513px;
+      }
+    }
+
+    #text {
+      padding-bottom: 204px;
+    }
+
+    &_text {
+      padding-bottom: 28px;
+
+      input {
+        letter-spacing: 1.8px;
+        vertical-align: top;
+      }
+    }
+
+    &_radio {
+      height: 17px;
+      margin-bottom: 35px;
+
+      @include mq("lg") {
+        margin-bottom: 65px;
+      }
+
+      label {
+        height: 17px;
+      }
+
+      input {
+        //display: inline-block;
+        //width: 17px;
+        //height: 17px;
+        display: none;
+
+        + span {
+          cursor: pointer;
+          display: inline-block;
+          padding: 0 0px 0 28px;
+          position: relative;
+
+          @include mq("lg") {
+            padding: 0 36px 0 28px;
+          }
+
+          &::before,
+          &::after {
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          &::before {
+            background: #fff;
+            border: 1px solid #707070;
+            display: block;
+            left: 0;
+            width: 20px;
+            height: 20px;
+          }
+
+          &::after {
+            background: #3f51b5;
+            border: 1px solid transparent;
+            left: 5px;
+            width: 10px;
+            height: 10px;
+            transition: opacity 0.3s ease 0s;
+            opacity: 0;
+          }
+        }
+
+        &:checked {
+          + span {
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    &_check {
+      display: flex;
+      margin: 0 auto 27px;
+
+      input {
+        width: 25px;
+        height: 25px;
+        margin-right: 0px;
+        /* background: url(./../../img/checkbox.svg);
+        background-repeat: no-repeat;
+        background-position: center center; */
+
+        appearance: none;
+
+        + span {
+          display: inline-block;
+          padding: 0 30px 0 30px;
+          position: relative;
+          font-size: 12px;
+          margin: auto 0;
+
+          @include mq("lg") {
+            padding: 0 49px;
+            font-size: 16px;
+          }
+
+          &::before,
+          &::after {
+            content: "";
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+          }
+
+          &::before {
+            background: #fff;
+            border: 1px solid #707070;
+            width: 23px;
+            height: 23px;
+            left: 0;
+          }
+
+          &::after {
+            background: transparent url(./../../img/checkbox.svg) no-repeat
+              center center;
+            width: 23px;
+            height: 23px;
+            left: 0;
+            //transition: opacity 0.3s ease 0s;
+            opacity: 0;
+          }
+
+          &:checked {
+            + span {
+              &::after {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+
+      a {
+        vertical-align: middle;
+        font-weight: bold;
+        color: #333333;
+      }
+    }
+  }
+
+  button {
+    @include btn(280px, 54px, 16px);
+
+    @include mq("md") {
+      @include btn(304px, 54px, 16px);
+    }
+
+    @include mq("lg") {
+      @include btn(304px, 54px, 16px);
+    }
+
+    margin: 0 auto;
+    background-image: url(./../../img/button-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+  }
+}

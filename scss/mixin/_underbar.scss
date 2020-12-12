@@ -1,0 +1,33 @@
+@mixin underbar() {
+  position: relative;
+  text-align: center;
+  padding-top: 52px;
+  margin: 0 0 58px 0;
+
+  @include mq("lg") {
+    margin: 0 0 98px 0;
+    padding-top: 92px;
+    font-size: 42px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -14px;
+    width: 40px;
+    height: 4px;
+    transform: translate(-50%);
+    background-color: $background-color-blue;
+
+    @include mq("md") {
+      bottom: -18px;
+      width: 45px;
+    }
+
+    @include mq("lg") {
+      bottom: -19px;
+      width: 60px;
+    }
+  }
+}

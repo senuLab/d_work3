@@ -8,39 +8,15 @@
 
   @include mq("lg") {
     height: 926px;
+    padding: 0;
   }
 
   h2 {
-    position: relative;
-    text-align: center;
-    padding-top: 52px;
-    margin: 0 0 58px 0;
+    @include underbar();
 
     @include mq("lg") {
       margin: 0 0 98px 0;
-      padding-top: 92px;
-      font-size: 42px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      bottom: -14px;
-      width: 40px;
-      height: 4px;
-      transform: translate(-50%);
-      background-color: $background-color-blue;
-
-      @include mq("md") {
-        bottom: -18px;
-        width: 45px;
-      }
-
-      @include mq("lg") {
-        bottom: -19px;
-        width: 60px;
-      }
+      padding-top: 96px;
     }
   }
 
@@ -54,7 +30,7 @@
 
     @include mq("lg") {
       width: 800px;
-      margin-top: 108px;
+      margin-top: 110px;
       margin: 0 auto;
     }
   }
@@ -101,10 +77,11 @@
 
   &-btn {
     @include btn(304px, 56px, 16px);
-    background-image: url(./../../img/button-arrow.svg);
+     background-image: url(./../../img/button-arrow.svg);
     background-repeat: no-repeat;
-    background-position: center right 10px;
-    //background: transparent url(./../../img/button-arrow.svg) no-repeat center right 10px;
+    background-position: center right 10px; 
+    /* background: transparent url(./../../img/button-arrow.svg) no-repeat center
+      right 10px ; */
 
     &_wrapper {
       text-align: center;

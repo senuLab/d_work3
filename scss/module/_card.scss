@@ -16,37 +16,10 @@
   }
 
   h2 {
-    margin: 0 0 52px 0;
-    padding-top: 50px;
-    font-size: 24px;
-    text-align: center;
-    position: relative;
+    @include underbar();
 
     @include mq("lg") {
       margin: 0 0 78px 0;
-      padding-top: 94px;
-      font-size: 40px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      bottom: -14px;
-      width: 40px;
-      height: 4px;
-      transform: translate(-50%);
-      background-color: $background-color-blue;
-
-      @include mq("md") {
-        bottom: -18px;
-        width: 45px;
-      }
-
-      @include mq("lg") {
-        bottom: -23px;
-        width: 60px;
-      }
     }
   }
 
