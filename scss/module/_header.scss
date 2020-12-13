@@ -15,8 +15,7 @@ header {
 
   @include mq("lg") {
     top: 0;
-    left: 40px;
-    //height: $lg-header-height;
+    height: $lg-header-height;
   }
 
   .container {
