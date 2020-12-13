@@ -62,7 +62,7 @@ header {
 @media screen and (min-width: 1280px) {
   header {
     top: 0;
-    left: 40;
+    left: 40px;
   }
 }
 
@@ -643,7 +643,7 @@ header .nav-items .nav-item:first-child {
   font-weight: bold;
   text-decoration: none;
   padding-right: 16px;
-  background: transparent url(./../../img/news-arrow.svg) no-repeat center right;
+  background: transparent url(./../../img/news-arrow.png) no-repeat center right;
 }
 
 .news-more .more-link:hover {
@@ -974,7 +974,7 @@ header .nav-items .nav-item:first-child {
   font-weight: bold;
   color: #ffffff;
   cursor: pointer;
-  background-image: url(./../../img/button-arrow.svg);
+  background-image: url(./../../img/button-arrow.png);
   background-repeat: no-repeat;
   background-position: center right 10px;
   /* background: transparent url(./../../img/button-arrow.svg) no-repeat center
@@ -1155,7 +1155,7 @@ header .nav-items .nav-item:first-child {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: transparent url(./../../img/select-arrow.svg) no-repeat center right 10px;
+  background: transparent url(./../../img/select-arrow.png) no-repeat center right 10px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -1304,7 +1304,7 @@ header .nav-items .nav-item:first-child {
 }
 
 .contact-item_check input + span::after {
-  background: transparent url(./../../img/checkbox.svg) no-repeat center center;
+  background: transparent url(./../../img/checkbox.png) no-repeat center center;
   width: 23px;
   height: 23px;
   left: 0;
@@ -1338,7 +1338,7 @@ header .nav-items .nav-item:first-child {
   color: #ffffff;
   cursor: pointer;
   margin: 0 auto;
-  background-image: url(./../../img/button-arrow.svg);
+  background-image: url(./../../img/button-arrow.png);
   background-repeat: no-repeat;
   background-position: center right 10px;
 }
