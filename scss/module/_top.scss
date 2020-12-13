@@ -43,9 +43,45 @@
     }
   }
   .btn {
-    @include btn(100%, 72px, 20px);
-    @include mq("lg") {
-      @include btn(384px, 72px, 24px);
+    //@include btn(100%, 72px, 20px);
+    transition: all 0.3s ease 0s;
+    //transition: all 1s linear 0s;
+
+    //@include mq("lg") {
+    @include btn(384px, 72px, 24px);
+    //}
+
+    //pattern3
+    //border-bottom: 4px solid black;
+
+    &:hover {
+      //pattern1
+      opacity: 0.7;
+
+      //pattern2
+      //filter: invert(100%);
+
+      //pattern3
+      //border: none;
+      //transform: translateY(4px);
+
+      //pattern4
+      //box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      //transform: translateY(-4px);
+
+      //pattern5
+      //transform: rotateX(360deg);
+
+      //pattern6
+      //transform: rotateY(360deg);
+
+      //pattern7
+      //transform: rotateZ(360deg);
+
+      //pattern8
+      //transform: scale(1.1, 1.1);
+
+      //pattern
     }
   }
 }

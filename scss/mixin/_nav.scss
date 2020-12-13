@@ -38,6 +38,7 @@
       text-decoration: none;
       color: $color-white;
       position: relative;
+      transition: all 0.3s;
 
       /* pattern2
       display: block;
@@ -65,6 +66,12 @@
       }
 
       &.is-active {
+        &::after {
+          opacity: 1;
+        }
+      }
+
+      &:hover {
         &::after {
           opacity: 1;
         }

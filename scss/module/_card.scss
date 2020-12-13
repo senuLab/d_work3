@@ -60,7 +60,9 @@
 
     img {
       padding: 12px;
-      max-width: 100%;
+      //max-width: 100%;
+      width: 100%;
+      height: auto;
       box-sizing: border-box;
 
       @include mq("md") {

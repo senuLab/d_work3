@@ -17,5 +17,6 @@ $color-white: #ffffff;
 $breakpoints: (
   "sm": "screen and (max-width:479px)",
   "md": "screen and (min-width:480px)",
-  "lg": "screen and (min-width:769px)",
+  //"lg": "screen and (min-width:769px)",
+  "lg": "screen and (min-width:1280px)"
 );
