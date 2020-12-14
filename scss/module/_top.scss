@@ -1,11 +1,11 @@
 .top {
   width: $sm-canvas-width;
   height: 450px;
-  /* position: absolute; */
+  //position: absolute;
   margin-top: $sm-header-height;
-  background-image: url("./../img/mainvisual.png");
+  /* background-image: url("./../img/mainvisual.png");
   background-size: auto;
-  background-size: cover;
+  background-size: cover; */
   text-align: center;
   /* height: 100vh; */
 
@@ -16,6 +16,20 @@
     margin-top: $lg-header-height;
   }
 
+  .swiper-slide {
+    position: relative;
+    width: $sm-canvas-width;
+    height: 450px;
+
+    background: transparent url(../../img/mainvisual.png) no-repeat top center /
+      cover;
+
+    @include mq("lg") {
+      width: 100%;
+      height: 600px;
+    }
+  }
+
   h1 {
     padding: 150px 0 22px 0;
     margin: 0;
@@ -23,7 +37,7 @@
 
     @include mq("md") {
       padding: 160px 0 15px 0;
-      font-size: 50px;
+      font-size: 40px;
     }
 
     @include mq("lg") {

@@ -6,15 +6,30 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="./css/swiper-bundle.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="./css/drawer.css" />
+
     <title>Document</title>
   </head>
-  <body>
+  <body class="drawer drawer--right">
     <header>
       <div class="container">
         <div class="header-logo">
           <img src="./img/logo.png" alt="logoの画像" />
         </div>
         <nav class="header-nav">
+          <button type="button" class="drawer-toggle drawer-hamburger">
+          </button>
+          <nav class="drawer-nav" role="navigation">
+            <ul class="drawer-menu">
+              <li><a class="drawer-menu-item" href="#">Card</a></li>
+              <li><a class="drawer-menu-item" href="#">News</a></li>
+              <li><a class="drawer-menu-item" href="#">Price</a></li>
+              <li><a class="drawer-menu-item" href="#">Access</a></li>
+              <li><a class="drawer-menu-item" href="#">Contact</a></li>
+            </ul>
+          </nav>
           <ul class="nav-items">
             <li class="nav-item"><a class="is-active" href="#">Card</a></li>
             <li class="nav-item"><a href="#">News</a></li>
@@ -27,10 +42,52 @@
     </header>
 
     <section class="top">
-      <div class="container">
-        <h1>一番伝えたいことを書く</h1>
-        <p>リードリードリード</p>
-        <button class="btn">お問い合わせ</button>
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="container">
+              <h1>一番伝えたいことを書く</h1>
+              <p>リードリードリード</p>
+              <button class="btn">お問い合わせ</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <h1>一番伝えたいことを書く</h1>
+              <p>リードリードリード</p>
+              <button class="btn">お問い合わせ</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <h1>一番伝えたいことを書く</h1>
+              <p>リードリードリード</p>
+              <button class="btn">お問い合わせ</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <h1>一番伝えたいことを書く</h1>
+              <p>リードリードリード</p>
+              <button class="btn">お問い合わせ</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <h1>一番伝えたいことを書く</h1>
+              <p>リードリードリード</p>
+              <button class="btn">お問い合わせ</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+
+        <!-- navigation buttons -->
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
       </div>
     </section>
 
@@ -38,42 +95,66 @@
       <div class="container">
         <h2>Card</h2>
         <div class="card-wrap">
-          <div class="card-item">
+          <div
+            class="card-item wow flipInX"
+            data-wow-duration="2s"
+            data-wow-offset="10"
+          >
             <img src="./img/card-img.svg" alt="" />
             <h3>タイトルタイトル</h3>
             <p>
               テキストテキストテキストテキストテキストテキストテキストテキストテキスト
             </p>
           </div>
-          <div class="card-item">
+          <div
+            class="card-item wow rotateIn"
+            data-wow-duration="2s"
+            data-wow-offset="10"
+          >
             <img src="./img/card-img.svg" alt="" />
             <h3>タイトルタイトル</h3>
             <p>
               テキストテキストテキストテキストテキストテキストテキストテキストテキスト
             </p>
           </div>
-          <div class="card-item">
+          <div
+            class="card-item wow rollIn"
+            data-wow-duration="2s"
+            data-wow-offset="10"
+          >
             <img src="./img/card-img.svg" alt="" />
             <h3>タイトルタイトル</h3>
             <p>
               テキストテキストテキストテキストテキストテキストテキストテキストテキスト
             </p>
           </div>
-          <div class="card-item">
+          <div
+            class="card-item wow hinge"
+            data-wow-duration="2s"
+            data-wow-offset="10"
+          >
             <img src="./img/card-img.svg" alt="" />
             <h3>タイトルタイトル</h3>
             <p>
               テキストテキストテキストテキストテキストテキストテキストテキストテキスト
             </p>
           </div>
-          <div class="card-item">
+          <div
+            class="card-item wow slideInLeft"
+            data-wow-duration="2s"
+            data-wow-offset="10"
+          >
             <img src="./img/card-img.svg" alt="" />
             <h3>タイトルタイトル</h3>
             <p>
               テキストテキストテキストテキストテキストテキストテキストテキストテキスト
             </p>
           </div>
-          <div class="card-item">
+          <div
+            class="card-item wow wobble"
+            data-wow-duration="2s"
+            data-wow-offset="10"
+          >
             <img src="./img/card-img.svg" alt="" />
             <h3>タイトルタイトル</h3>
             <p>
@@ -332,5 +413,12 @@
         <a href="#"><img src="./img/totop.svg" alt="" /></a>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./scss/mixin/js/wow.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
+    <script src="./scss/mixin/js/custom.js"></script>
   </body>
 </html>
