@@ -193,9 +193,6 @@ header .nav-items .nav-item {
         transition: all 0.3s;
         //transform: scale(1);
       } */
-}
-
-header .nav-items .nav-item a:hover {
   /* animation: zoom 0.3s;
         @keyframes zoom {
           50% {
@@ -681,19 +678,46 @@ header .nav-items .nav-item:first-child {
   }
 }
 
-.price-title {
-  padding-top: 20px;
-}
-
 .price-title h2 {
   position: relative;
   text-align: center;
+  padding-top: 52px;
+  margin: 0 0 58px 0;
+  /* position: relative;
+      text-align: center;
+
+      @include mq("lg") {
+        margin: 0 0 98px 0;
+        padding-top: 72px;
+        font-size: 42px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -14px;
+        width: 40px;
+        height: 4px;
+        transform: translate(-50%);
+        background-color: $background-color-blue;
+
+        @include mq("md") {
+          bottom: -18px;
+          width: 45px;
+        }
+
+        @include mq("lg") {
+          bottom: -19px;
+          width: 60px;
+        }
+      } */
 }
 
 @media screen and (min-width: 1280px) {
   .price-title h2 {
     margin: 0 0 98px 0;
-    padding-top: 72px;
+    padding-top: 92px;
     font-size: 42px;
   }
 }
@@ -1621,6 +1645,7 @@ footer {
 }
 
 .scroll {
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;

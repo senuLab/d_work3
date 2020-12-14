@@ -12,10 +12,11 @@
   }
 
   &-title {
-    padding-top: 20px;
+    //padding-top: 20px;
 
     h2 {
-      position: relative;
+      @include underbar();
+      /* position: relative;
       text-align: center;
 
       @include mq("lg") {
@@ -43,7 +44,7 @@
           bottom: -19px;
           width: 60px;
         }
-      }
+      } */
     }
   }
 
