@@ -57,14 +57,14 @@
       border: 1px solid #3f51b5;
       color: #3f51b5;
       border-radius: 30px;
-      background-image: url(./../../img/arrow-top.svg);
+      background-image: url(./../../img/arrow-bottom.svg);
       background-repeat: no-repeat;
       background-position: center right 15px;
       transition: opacity 0.3s, background-color 0.3s;
       position: relative;
 
       &.is-active {
-        background-image: url(./../../img/arrow-bottom.svg);
+        background-image: url(./../../img/arrow-top.svg);
         background-repeat: no-repeat;
         background-position: center right 15px;
       }
@@ -85,6 +85,7 @@
     }
 
     &_body {
+      display: none;
       width: 400px;
       color: #3f51b5;
     }

@@ -1,0 +1,82 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 350;
+  width: 900px;
+  height: 652px;
+  margin: 0 auto;
+  padding: 10px 70px 10px;
+  background-color: $color-white;
+  box-sizing: border-box;
+
+  &-batsu {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    cursor: pointer;
+  }
+
+  &-title {
+    text-align: center;
+    margin: 60px 0;
+    @include underbar();
+    font-size: 15px;
+    color: #707070;
+  }
+
+  &-content {
+    color: #707070;
+  }
+
+  &-head {
+    font-size: 20px;
+    margin-bottom: 10px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -20px;
+      width: 4px;
+      height: 20px;
+      transform: translateY(-50%);
+      background-color: #3f51b5;
+    }
+  }
+
+  &-body {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  button {
+    @include btn(176px, 48px, 16px);
+    padding: 0;
+    display: block;
+    margin: 30px auto 0;
+  }
+
+  &-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    width: 100%;
+    height: 100%;
+    background-color: #0000004d;
+    opacity: 0.7;
+
+    &.is-show {
+      display: block;
+    }
+  }
+
+  &.is-show {
+    display: block;
+  }
+}
