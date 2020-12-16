@@ -70,6 +70,10 @@ $(window).on("scroll", function() {
 
   $('.nav-item a').click(function () {
 
+
+    $('.nav-item a').removeClass('is-active');
+    $(this).addClass("is-active");
+
     let header = $(".header").innerHeight(); 
     /* let speed = 300; */
     let id = $(this).attr("href");
@@ -79,4 +83,14 @@ $(window).on("scroll", function() {
       scrollTop: position
     }, 300);
     return false;
+  });
+
+  $(".qa-head").click(function(){
+    $(this).next().slideToggle();
+    $(this).toggleClass("is-active");
+  });
+
+  $(".qa-plus_head").click(function(){
+    $(this).next().slideToggle();
+    $(this).toggleClass("is-active");
   });

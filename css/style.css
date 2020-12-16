@@ -1022,6 +1022,140 @@ header .nav-items .nav-item:first-child {
   text-align: center;
 }
 
+.qa {
+  height: 700px;
+}
+
+.qa h2 {
+  position: relative;
+  text-align: center;
+  padding-top: 52px;
+  margin: 0 0 58px 0;
+}
+
+@media screen and (min-width: 1280px) {
+  .qa h2 {
+    margin: 0 0 98px 0;
+    padding-top: 92px;
+    font-size: 42px;
+  }
+}
+
+.qa h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -14px;
+  width: 40px;
+  height: 4px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background-color: #2f51b5;
+}
+
+@media screen and (min-width: 480px) {
+  .qa h2::after {
+    bottom: -18px;
+    width: 45px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .qa h2::after {
+    bottom: -19px;
+    width: 60px;
+  }
+}
+
+.qa-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.qa-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px 20px;
+  margin-top: 24px;
+  background-color: #3f51b5;
+  color: #ffffff;
+  font-weight: bold;
+  background-image: url(./../../img/plus.svg);
+  background-repeat: no-repeat;
+  background-position: center right 15px;
+}
+
+.qa-head.is-active {
+  background-image: url(./../../img/minus.svg);
+  background-repeat: no-repeat;
+  background-position: center right 15px;
+}
+
+.qa-head p {
+  margin: 0 25px 0 0;
+}
+
+.qa-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  color: #3f51b5;
+  font-weight: bold;
+}
+
+.qa-body_wrap {
+  display: none;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  border: 1px solid #3f51b5;
+}
+
+.qa-body p {
+  margin: 0 25px 0 0;
+}
+
+.qa-plus_head {
+  width: 400px;
+  height: 60px;
+  border: 1px solid #3f51b5;
+  color: #3f51b5;
+  border-radius: 30px;
+  background-image: url(./../../img/arrow-top.svg);
+  background-repeat: no-repeat;
+  background-position: center right 15px;
+  -webkit-transition: opacity 0.3s, background-color 0.3s;
+  transition: opacity 0.3s, background-color 0.3s;
+  position: relative;
+}
+
+.qa-plus_head.is-active {
+  background-image: url(./../../img/arrow-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: center right 15px;
+}
+
+.qa-plus_head:hover {
+  opacity: 0.7;
+  background-color: #d4d0d0;
+}
+
+.qa-plus_head p {
+  width: 120px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.qa-plus_body {
+  width: 400px;
+  color: #3f51b5;
+}
+
 .contact {
   height: 100%;
   background-color: #efefef;
