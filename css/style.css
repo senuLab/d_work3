@@ -1787,7 +1787,6 @@ footer {
 }
 
 .modal {
-  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1795,7 +1794,7 @@ footer {
           transform: translate(-50%, -50%);
   z-index: 350;
   width: 300px;
-  height: 750px;
+  height: 550px;
   margin: 0 auto;
   padding: 10px 70px 10px;
   background-color: #ffffff;
@@ -1883,23 +1882,40 @@ footer {
 
 .modal-content {
   color: #707070;
+  height: 250px;
+  overflow: scroll;
+}
+
+@media screen and (min-width: 480px) {
+  .modal-content {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .modal-content {
+    height: 350px;
+  }
 }
 
 .modal-head {
   font-size: 12px;
   margin-bottom: 10px;
   position: relative;
+  padding-left: 15px;
 }
 
 @media screen and (min-width: 480px) {
   .modal-head {
     font-size: 15px;
+    padding-left: 20px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .modal-head {
     font-size: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -1907,29 +1923,39 @@ footer {
   content: "";
   position: absolute;
   top: 50%;
-  left: -20px;
-  width: 4px;
-  height: 20px;
+  left: 0px;
+  width: 3px;
+  height: 15px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background-color: #3f51b5;
+}
+
+@media screen and (min-width: 1280px) {
+  .modal-head::before {
+    width: 4px;
+    height: 20px;
+  }
 }
 
 .modal-body {
   margin: 0;
   margin-bottom: 20px;
   font-size: 10px;
+  padding-left: 15px;
 }
 
 @media screen and (min-width: 480px) {
   .modal-body {
     font-size: 12px;
+    padding-left: 20px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .modal-body {
     font-size: 16px;
+    padding-left: 20px;
   }
 }
 
@@ -2002,8 +2028,7 @@ footer {
   z-index: 300;
   width: 100%;
   height: 100%;
-  background-color: #0000004d;
-  opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-background.is-show {

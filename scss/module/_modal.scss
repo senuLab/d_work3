@@ -1,12 +1,12 @@
 .modal {
-  display: none;
+  //display: none;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 350;
   width: 300px;
-  height: 750px;
+  height: 550px;
   margin: 0 auto;
   padding: 10px 70px 10px;
   background-color: $color-white;
@@ -47,30 +47,48 @@
 
   &-content {
     color: #707070;
+    height: 250px;
+    overflow: scroll;
+
+    @include mq("md") {
+      height: 300px;
+    }
+
+    @include mq("lg") {
+      height: 350px;
+    }
   }
 
   &-head {
     font-size: 12px;
     margin-bottom: 10px;
     position: relative;
+    padding-left: 15px;
 
     @include mq("md") {
       font-size: 15px;
+      padding-left: 20px;
     }
 
     @include mq("lg") {
       font-size: 20px;
+      padding-left: 20px;
     }
 
     &::before {
       content: "";
       position: absolute;
       top: 50%;
-      left: -20px;
-      width: 4px;
-      height: 20px;
+      left: 0px;
+      width: 3px;
+      height: 15px;
       transform: translateY(-50%);
       background-color: #3f51b5;
+
+      @include mq("lg") {
+        width: 4px;
+        height: 20px;
+      }
     }
   }
 
@@ -78,13 +96,16 @@
     margin: 0;
     margin-bottom: 20px;
     font-size: 10px;
+    padding-left: 15px;
 
     @include mq("md") {
       font-size: 12px;
+      padding-left: 20px;
     }
 
     @include mq("lg") {
       font-size: 16px;
+      padding-left: 20px;
     }
   }
 
@@ -111,8 +132,7 @@
     z-index: 300;
     width: 100%;
     height: 100%;
-    background-color: #0000004d;
-    opacity: 0.7;
+    background-color: rgba(0, 0, 0, 0.7);
 
     &.is-show {
       display: block;

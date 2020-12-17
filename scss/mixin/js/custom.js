@@ -97,11 +97,11 @@ $(window).on("scroll", function() {
 
   $(".modal-open").click(function(e){
     e.preventDefault();
-    $(".modal-background").addClass("is-show");
-    $(".modal").addClass("is-show");
+    $("." + $(this).data("target")).addClass("is-show");
+    /* $(".modal").addClass("is-show"); */
   });
 
   $(".modal-close").click(function(){
-    $(".modal-background").removeClass("is-show");
-    $(".modal").removeClass("is-show");
+    $("." + $(this).data("target")).removeClass("is-show");
+    /* $(".modal").removeClass("is-show"); */
   });
