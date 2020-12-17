@@ -5,12 +5,22 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 350;
-  width: 900px;
-  height: 652px;
+  width: 300px;
+  height: 750px;
   margin: 0 auto;
   padding: 10px 70px 10px;
   background-color: $color-white;
   box-sizing: border-box;
+
+  @include mq("md") {
+    width: 600px;
+    height: 600px;
+  }
+
+  @include mq("lg") {
+    width: 900px;
+    height: 750px;
+  }
 
   &-batsu {
     position: absolute;
@@ -23,8 +33,16 @@
     text-align: center;
     margin: 60px 0;
     @include underbar();
-    font-size: 15px;
+    font-size: 10px;
     color: #707070;
+
+    @include mq("md") {
+      font-size: 12px;
+    }
+
+    @include mq("lg") {
+      font-size: 15px;
+    }
   }
 
   &-content {
@@ -32,9 +50,17 @@
   }
 
   &-head {
-    font-size: 20px;
+    font-size: 12px;
     margin-bottom: 10px;
     position: relative;
+
+    @include mq("md") {
+      font-size: 15px;
+    }
+
+    @include mq("lg") {
+      font-size: 20px;
+    }
 
     &::before {
       content: "";
@@ -51,6 +77,15 @@
   &-body {
     margin: 0;
     margin-bottom: 20px;
+    font-size: 10px;
+
+    @include mq("md") {
+      font-size: 12px;
+    }
+
+    @include mq("lg") {
+      font-size: 16px;
+    }
   }
 
   button {
@@ -58,6 +93,14 @@
     padding: 0;
     display: block;
     margin: 30px auto 0;
+
+    @include mq("md") {
+      @include btn(176px, 48px, 16px);
+    }
+
+    @include mq("lg") {
+      @include btn(176px, 48px, 16px);
+    }
   }
 
   &-background {

@@ -1117,7 +1117,7 @@ header .nav-items .nav-item:first-child {
 }
 
 .qa-plus_head {
-  width: 400px;
+  width: 300px;
   height: 60px;
   border: 1px solid #3f51b5;
   color: #3f51b5;
@@ -1794,13 +1794,27 @@ footer {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 350;
-  width: 900px;
-  height: 652px;
+  width: 300px;
+  height: 750px;
   margin: 0 auto;
   padding: 10px 70px 10px;
   background-color: #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .modal {
+    width: 900px;
+    height: 750px;
+  }
 }
 
 .modal-batsu {
@@ -1817,7 +1831,7 @@ footer {
   text-align: center;
   padding-top: 52px;
   margin: 0 0 58px 0;
-  font-size: 15px;
+  font-size: 10px;
   color: #707070;
 }
 
@@ -1855,14 +1869,38 @@ footer {
   }
 }
 
+@media screen and (min-width: 480px) {
+  .modal-title {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .modal-title {
+    font-size: 15px;
+  }
+}
+
 .modal-content {
   color: #707070;
 }
 
 .modal-head {
-  font-size: 20px;
+  font-size: 12px;
   margin-bottom: 10px;
   position: relative;
+}
+
+@media screen and (min-width: 480px) {
+  .modal-head {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .modal-head {
+    font-size: 20px;
+  }
 }
 
 .modal-head::before {
@@ -1880,6 +1918,19 @@ footer {
 .modal-body {
   margin: 0;
   margin-bottom: 20px;
+  font-size: 10px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal-body {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .modal-body {
+    font-size: 16px;
+  }
 }
 
 .modal button {
@@ -1901,6 +1952,46 @@ footer {
   padding: 0;
   display: block;
   margin: 30px auto 0;
+}
+
+@media screen and (min-width: 480px) {
+  .modal button {
+    width: 100%;
+    max-width: 176px;
+    height: 48px;
+    border-radius: 8px;
+    /* border-top: none;
+  border-right: none;
+  border-left: none; */
+    border: none;
+    -webkit-box-shadow: 0px 3px 6px #00000029;
+            box-shadow: 0px 3px 6px #00000029;
+    background-color: #2f51b5;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .modal button {
+    width: 100%;
+    max-width: 176px;
+    height: 48px;
+    border-radius: 8px;
+    /* border-top: none;
+  border-right: none;
+  border-left: none; */
+    border: none;
+    -webkit-box-shadow: 0px 3px 6px #00000029;
+            box-shadow: 0px 3px 6px #00000029;
+    background-color: #2f51b5;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+  }
 }
 
 .modal-background {
